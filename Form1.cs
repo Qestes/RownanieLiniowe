@@ -26,6 +26,7 @@ namespace RownanieLiniowe
             label5.Text = n.ToString();
             numericUpDown1.Value = n;
             format();
+            button3.Enabled = false;
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace RownanieLiniowe
             label5.Text = n.ToString();
             trackBar1.Value = n;
             format();
+            button3.Enabled = false;
         }
         private void format()
         {
@@ -61,6 +63,7 @@ namespace RownanieLiniowe
             {
                 dataGridView3[0, i].Value = (losuj.Next(-100, 100) + losuj.NextDouble()).ToString("0.00");
             }
+            button3.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -85,6 +88,25 @@ namespace RownanieLiniowe
                     suma += Double.Parse(dataGridView1[j,i].Value.ToString());
                 }
                 dataGridView3[0, i].Value = suma;
+            }
+            button3.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double[,] A;
+            double[] B, X;
+            A = new double[n + 1, n + 1];
+            B = new double[n + 1];
+            X = new double[n + 1];
+
+            for(int i = 0;i < n; i++)
+            {
+                for(int j = 0; j < n; j++)
+                {
+                    A[i,j] = Double.Parse(dataGridView1[i,j].Value.ToString());
+                }
+                X[i] = Double.Parse(dataGridView1[0,i].Value.ToString());
             }
         }
     }
