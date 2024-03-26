@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BIBLIOTEKA_NR2.AlgebraLiniowa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Numerics;
 
 namespace RownanieLiniowe
 {
@@ -100,14 +102,25 @@ namespace RownanieLiniowe
             B = new double[n + 1];
             X = new double[n + 1];
 
-            for(int i = 0;i < n; i++)
+            for(int i = 0; i < n; i++)
             {
                 for(int j = 0; j < n; j++)
-                {
-                    A[i,j] = Double.Parse(dataGridView1[i,j].Value.ToString());
-                }
-                X[i] = Double.Parse(dataGridView1[0,i].Value.ToString());
+                    A[i + 1, j + 1] = Double.Parse(dataGridView1[j,i].Value.ToString());
+                B[i + 1] = Double.Parse(dataGridView3[0,i].Value.ToString());
             }
+
+            int z = MetodaGaussa.RozRowMacGaussa(A, B, X, 1e-10);
+
+            for (int i = 0; i < n; i++)
+            {
+                dataGridView2[0, i].Value = X[i+1].ToString("0.00");
+            }
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

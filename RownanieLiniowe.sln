@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RownanieLiniowe", "RownanieLiniowe.csproj", "{925AABE0-76C4-4311-B226-53B4574640BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIBLIOTEKA_NR2", "..\Biblioteki\BIBLIOTEKA_NR2\BIBLIOTEKA_NR2.csproj", "{62C84A01-A622-474F-83ED-ED7ABEFE8E4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{925AABE0-76C4-4311-B226-53B4574640BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{925AABE0-76C4-4311-B226-53B4574640BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{925AABE0-76C4-4311-B226-53B4574640BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C84A01-A622-474F-83ED-ED7ABEFE8E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C84A01-A622-474F-83ED-ED7ABEFE8E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C84A01-A622-474F-83ED-ED7ABEFE8E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C84A01-A622-474F-83ED-ED7ABEFE8E4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
